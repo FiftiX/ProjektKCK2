@@ -41,8 +41,7 @@
         <Rectangle Tag="Car2" Height="132" Width="170" Fill="Blue" Canvas.Left="1074" Canvas.Top="5"/>
         <Label x:Name="scoreText"  Content="Label" Canvas.Left="21" Canvas.Top="-14" Height="42" Width="178"/>
         <Label x:Name="EndLabel" Content="" Canvas.Left="247" Canvas.Top="36" Height="132" Width="800" FontWeight="Bold" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FFE60606" />
-        <TextBox Height="62" Canvas.Left="440" TextWrapping="Wrap" Text="TextBox" Canvas.Top="386" Width="414" Visibility="Visible" FontSize="36"/>
-        <Label Content="Podaj swój nick:" Canvas.Left="440" Canvas.Top="299" Height="87" Width="414" Background="DimGray" Foreground="#FFE9F134" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Visibility="Visible" FontSize="36" />
+        
 
 
     </Canvas>

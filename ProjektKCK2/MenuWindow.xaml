@@ -40,6 +40,9 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
+        <Label x:Name="NickLabel" Content="Podaj nick i naciśnij Enter:" HorizontalAlignment="Left" Margin="338,413,0,0" VerticalAlignment="Top" Height="99" Width="550" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" Visibility="Hidden"/>
+        <TextBox x:Name="NickText" HorizontalAlignment="Left" Height="116" Margin="338,512,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="550" FontSize="36" HorizontalContentAlignment="Center" Visibility="Hidden"/>
+
 
     </Grid>
 </Window>

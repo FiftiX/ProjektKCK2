@@ -141,29 +141,12 @@ namespace ProjektKCK2
                 MainCanvas.Children.Remove(y);
             }
 
-
-            if (score >= 10 && score < 20)
+          
+            if (score % 10 == 0 && score / 10 > Level)
             {
-                speed = 12;
+                Level++;
+                speed = speed + 2;
             }
-
-            if (score >= 20 && score < 30)
-            {
-                speed = 14;
-            }
-            if (score >= 30 && score < 40)
-            {
-                speed = 16;
-            }
-            if (score >= 40 && score < 50)
-            {
-                speed = 18;
-            }
-            if (score >= 50 && score < 80)
-            {
-                speed = 22;
-            }
-
 
         }
 
@@ -334,6 +317,11 @@ namespace ProjektKCK2
             {
                 moveRight = true;
             }
+
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
 
         }
 
