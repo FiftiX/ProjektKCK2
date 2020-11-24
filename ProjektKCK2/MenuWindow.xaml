@@ -5,37 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjektKCK2"
         mc:Ignorable="d"
-        Title="MenuWindow" Height="450" Width="800" KeyDown="KDown">
+        Title="MenuWindow" Height="800" Width="1280" KeyDown="KDown" MaxWidth="1280" MaxHeight="800" MinWidth="1280" MinHeight="800">
     <Grid>
-        <Label Content="NOWA GRA" HorizontalAlignment="Left" Margin="279,78,0,0" VerticalAlignment="Top" Height="39" Width="221" FontWeight="Bold" FontSize="20"/>
-        <Label Content="NAJLEPSZE WYNIKI" HorizontalAlignment="Left" Margin="279,117,0,0" VerticalAlignment="Top" Height="39" Width="221" FontWeight="Bold" FontSize="20"/>
-        <Label Content="WYJŚCIE" HorizontalAlignment="Left" Margin="279,156,0,0" VerticalAlignment="Top" Height="39" Width="221" FontWeight="Bold" FontSize="20"/>
-        <Rectangle x:Name="T1" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="17" Margin="252,90,0,0" Stroke="Black" VerticalAlignment="Top" Width="17" RenderTransformOrigin="0.5,0.5" Visibility="Visible">
+        <Label Content="NOWA GRA" HorizontalAlignment="Left" Margin="338,78,0,0" VerticalAlignment="Top" Height="103" Width="646" FontWeight="Bold" FontSize="50" VerticalContentAlignment="Center"/>
+        <Label Content="NAJLEPSZE WYNIKI" HorizontalAlignment="Left" Margin="338,181,0,0" VerticalAlignment="Top" Height="103" Width="646" FontWeight="Bold" FontSize="50" VerticalContentAlignment="Center"/>
+        <Label Content="WYJŚCIE" HorizontalAlignment="Left" Margin="338,284,0,0" VerticalAlignment="Top" Height="103" Width="646" FontWeight="Bold" FontSize="50" VerticalContentAlignment="Center"/>
+        <Rectangle x:Name="T1" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="45" Margin="259,110,0,0" Stroke="Black" VerticalAlignment="Top" Width="49" RenderTransformOrigin="0.5,0.5" Visibility="Visible">
             <Rectangle.RenderTransform>
                 <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-46.619"/>
+                    <ScaleTransform ScaleY="1.053" ScaleX="0.95"/>
+                    <SkewTransform AngleX="5.819"/>
+                    <RotateTransform Angle="-43.701"/>
                     <TranslateTransform/>
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <Rectangle x:Name="T2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="17" Margin="252,129,0,0" Stroke="Black" VerticalAlignment="Top" Width="17" RenderTransformOrigin="-0.693,1.008" Visibility="Hidden">
+        <Rectangle x:Name="T2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="45" Margin="283,232,0,0" Stroke="Black" VerticalAlignment="Top" Width="50" RenderTransformOrigin="-0.693,1.008" Visibility="Hidden">
             <Rectangle.RenderTransform>
                 <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-46.619"/>
+                    <ScaleTransform ScaleY="1.053" ScaleX="0.95"/>
+                    <SkewTransform AngleX="5.819"/>
+                    <RotateTransform Angle="-43.701"/>
                     <TranslateTransform X="12.627" Y="12.035"/>
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <Rectangle x:Name="T3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="17" Margin="252,167,0,0" Stroke="Black" VerticalAlignment="Top" Width="17" RenderTransformOrigin="-3.969,3.175" IsEnabled="False" Visibility="Hidden">
+        <Rectangle x:Name="T3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="45" Margin="368,380,0,0" Stroke="Black" VerticalAlignment="Top" Width="50" RenderTransformOrigin="-3.969,3.175" IsEnabled="False" Visibility="Hidden">
             <Rectangle.RenderTransform>
                 <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-46.619"/>
+                    <ScaleTransform ScaleY="1.053" ScaleX="0.95"/>
+                    <SkewTransform AngleX="5.819"/>
+                    <RotateTransform Angle="-43.701"/>
                     <TranslateTransform X="56.842" Y="40.974"/>
                 </TransformGroup>
             </Rectangle.RenderTransform>

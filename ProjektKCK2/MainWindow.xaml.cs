@@ -238,7 +238,7 @@ namespace ProjektKCK2
                 // if the power is OFF and car and the player collide then
 
                 gameTimer.Stop(); // stop the game timer
-                scoreText.Content += " Press Enter to replay"; // add this text to the existing text on the label
+                EndLabel.Content = "GAMEOVER!\n" + "Press R to Restart Game\n" + "Press Esc to Back Menu"; // add this text to the existing text on the label
                 gameOver = true; // set game over boolean to true
             }
         }
@@ -417,10 +417,18 @@ namespace ProjektKCK2
             }
 
             // in this case we will listen for the enter key aswell but for this to execute we will need the game over boolean to be true
-            if (e.Key == Key.Enter && gameOver == true)
+            if (e.Key == Key.R && gameOver == true)
             {
                 // if both of these conditions are true then we will run the start game function
+                EndLabel.Content = "";
                 StartGame();
+            }
+
+            if(e.Key == Key.Escape && gameOver == true)
+            {
+                MenuWindow men = new MenuWindow();
+                men.Show();
+                Close();
             }
         }
 

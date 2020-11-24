@@ -33,13 +33,14 @@
         <Rectangle Name="Line26" Fill="#FFF4F4F5" Tag="Mark1" Height="132" Stroke="Black" Width="16" Canvas.Top="227" Canvas.Left="838"/>
         <Rectangle Name="Line27" Fill="#FFF4F4F5" Tag="Mark1" Height="132" Stroke="Black" Width="16" Canvas.Top="36" Canvas.Left="838"/>
         <Rectangle Name="Line28" Fill="#FFF4F4F5" Tag="Mark1" Height="132" Stroke="Black" Width="16" Canvas.Top="-156" Canvas.Left="838"/>
-        <Label x:Name="scoreText"  Content="Label" Canvas.Left="21" Canvas.Top="-14" Height="42" Width="178"/>
+
         <Image x:Name="e90_car" Source="Images/e90.png" Tag="e90" RenderTransformOrigin="0.425,1.827" Grid.Row="3" Canvas.Top="612.5" Height="132" Width="170" Canvas.Left="859" UseLayoutRounding="False" />
         <Rectangle Tag="Car" Height="132" Width="170" Fill="Blue" Canvas.Left="466" Canvas.Top="215" RenderTransformOrigin="-0.365,-0.326"/>
         <Rectangle Tag="Car" Height="132" Width="170" Fill="Blue" Canvas.Left="40" Canvas.Top="42"/>
         <Rectangle Tag="Car2" Height="132" Width="170" Fill="Blue" Canvas.Left="664" Canvas.Top="377"/>
         <Rectangle Tag="Car2" Height="132" Width="170" Fill="Blue" Canvas.Left="1074" Canvas.Top="5"/>
-
+        <Label x:Name="scoreText"  Content="Label" Canvas.Left="21" Canvas.Top="-14" Height="42" Width="178"/>
+        <Label x:Name="EndLabel" Content="" Canvas.Left="247" Canvas.Top="36" Height="132" Width="800" FontWeight="Bold" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FFE60606" />
 
 
     </Canvas>
