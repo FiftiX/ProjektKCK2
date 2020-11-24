@@ -102,13 +102,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\388-1228691019.jpg" />
     <Resource Include="Images\coin.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Resource Include="Images\e90.png" />
-    <Resource Include="Images\mk4_front.jpg" />
-    <Resource Include="Images\mk4_rear.jpg" />
-    <Resource Include="Images\passat_front.jpg" />
-    <Resource Include="Images\passat_rear.jpg" />
+    <Resource Include="Images\mk4_front.png" />
+    <Resource Include="Images\passat_front.png" />
+    <Resource Include="Images\passat_rear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\mk4_rear.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

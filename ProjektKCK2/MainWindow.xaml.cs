@@ -317,10 +317,10 @@ namespace ProjektKCK2
                 switch (carNum)
                 {
                     case 1:
-                        carImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/mk4_rear.jpg"));
+                        carImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/mk4_rear.png"));
                         break;
                     case 2:
-                        carImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/passat_rear.jpg"));
+                        carImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/passat_rear.png"));
                         break;
 
                 }
@@ -360,10 +360,10 @@ namespace ProjektKCK2
                 switch (carNum)
                 {
                     case 1:
-                        carImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/mk4_front.jpg"));
+                        carImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/mk4_front.png"));
                         break;
                     case 2:
-                        carImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/passat_front.jpg"));
+                        carImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/passat_front.png"));
                         break;
                 }
                 car.Fill = carImage; // assign the chosen car image to the car rectangle
