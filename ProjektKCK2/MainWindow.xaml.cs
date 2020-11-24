@@ -366,7 +366,7 @@ namespace ProjektKCK2
                         carImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/passat_front.png"));
                         break;
                 }
-                car.Fill = carImage; // assign the chosen car image to the car rectangle
+                car.Fill = carImage; 
 
                 foreach (var x in MainCanvas.Children.OfType<Rectangle>())
                 {   
