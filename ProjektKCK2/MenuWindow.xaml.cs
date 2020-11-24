@@ -58,9 +58,17 @@ namespace ProjektKCK2
 
             if(e.Key==Key.Enter && menu == 0)
             {
-                MainWindow GameWindow = new MainWindow();
-                GameWindow.Show();
-                Close();
+                NickLabel.Visibility = Visibility.Visible;
+                NickText.Visibility = Visibility.Visible;
+
+                if (e.Key == Key.Enter && NickText.Text!="")
+                {
+                    MainWindow GameWindow = new MainWindow();
+                    GameWindow.Show();
+                    Close();
+                }
+
+                
             }
 
             if(e.Key==Key.Enter && menu == 1)
