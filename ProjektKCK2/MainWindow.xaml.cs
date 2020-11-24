@@ -330,10 +330,9 @@ namespace ProjektKCK2
                 // set a random top and left position for the traffic car
                 foreach (var x in MainCanvas.Children.OfType<Rectangle>())
                 {
-                    Rect carHitBox = new Rect(Canvas.GetLeft(x), Canvas.GetTop(x), x.Width, x.Height);
                     if ((string)x.Tag == "Car2")
                     {
-                        if (Canvas.GetLeft(x) == NewWidth && (Math.Abs(Canvas.GetTop(x) - NewHeight)) < x.Height)
+                        if (Canvas.GetLeft(x) == NewWidth && Math.Abs(Canvas.GetTop(x) - NewHeight) <= x.Height + 10)
                         {
                             if (NewWidth < 664 + 205)
                                 NewWidth = NewWidth + 205;
@@ -370,17 +369,16 @@ namespace ProjektKCK2
                 car.Fill = carImage; // assign the chosen car image to the car rectangle
 
                 foreach (var x in MainCanvas.Children.OfType<Rectangle>())
-                {
-                    Rect carHitBox = new Rect(Canvas.GetLeft(x), Canvas.GetTop(x), x.Width, x.Height);
-                    if ((string)x.Tag == "Car2")
+                {   
+                    if ((string)x.Tag == "Car")
                     {
-                        if (Canvas.GetLeft(x) == NewWidth && (Math.Abs(Canvas.GetTop(x) - NewHeight)) <= x.Height)
+                        if (Canvas.GetLeft(x).Equals(NewWidth) && Math.Abs(Canvas.GetTop(x) - NewHeight) <= x.Height+10)
                         {
 
                             if (NewWidth < 50 + 205)
                                 NewWidth = NewWidth + 205;
                             else
-                                NewWidth = NewWidth - 205;
+                                NewHeight = NewWidth - 205;
                         }
                     }
 
