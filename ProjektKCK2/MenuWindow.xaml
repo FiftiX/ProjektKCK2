@@ -40,7 +40,7 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <Rectangle x:Name="T4" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="45" Margin="366,484,0,0" Stroke="Black" VerticalAlignment="Top" Width="50" RenderTransformOrigin="-3.969,3.175" IsEnabled="False" Visibility="Visible">
+        <Rectangle x:Name="T4" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="45" Margin="366,484,0,0" Stroke="Black" VerticalAlignment="Top" Width="50" RenderTransformOrigin="-3.969,3.175" IsEnabled="False" Visibility="Hidden">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="1.053" ScaleX="0.95"/>

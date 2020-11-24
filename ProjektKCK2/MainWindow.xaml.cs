@@ -63,7 +63,7 @@ namespace ProjektKCK2
             {
                 Canvas.SetLeft(e90_car, Canvas.GetLeft(e90_car) - SteeringSpeed);
             }
-            if (moveRight == true && Canvas.GetLeft(e90_car) + 199 < Application.Current.MainWindow.Width)
+            if (moveRight == true && Canvas.GetLeft(e90_car) + 199 < 1280)
             {
                 Canvas.SetLeft(e90_car, Canvas.GetLeft(e90_car) + SteeringSpeed);
             }
@@ -300,7 +300,7 @@ namespace ProjektKCK2
                             if (NewWidth < 50 + 205)
                                 NewWidth = NewWidth + 205;
                             else
-                                NewHeight = NewWidth - 205;
+                                NewWidth = NewWidth - 205;
                         }
                     }
 

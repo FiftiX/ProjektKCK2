@@ -137,7 +137,7 @@ namespace ProjektKCK2
 
         public void Reading()
         {
-            StreamReader r1 = new StreamReader("../Data/wyniki.txt");
+            StreamReader r1 = new StreamReader("/Dane/wyniki.txt");
             for (int i = 0; i < 10; i++)
             {
                 for (int j = 0; j < 2; j++)
@@ -145,18 +145,22 @@ namespace ProjektKCK2
                     array[i, j] = r1.ReadLine();
                 }
             }
+            r1.Close();
         }
 
         public void Writing()
         {
-            StreamWriter w1 = new StreamWriter("../Data/wyniki.txt");
+            string pom;
+            StreamWriter w1 = new StreamWriter("/Dane/wyniki.txt");
             for (int i = 0; i < 10; i++)
             {
                 for (int j = 0; j < 2; j++)
                 {
-                    w1.WriteLine(array[i, j]);
+                    pom = array[i, j];
+                    w1.WriteLine(pom);
                 }
             }
+            w1.Close();
 
 
         }
@@ -169,7 +173,7 @@ namespace ProjektKCK2
                 {
                     if (int.Parse(array[i, 1]) < score)
                     {
-                        for (int j = 10; j > i; j--)
+                        for (int j = 10; j > i+1; j--)
                         {
                             array[j - 1, 0] = array[j - 2, 0];
                             array[j - 1, 1] = array[j - 2, 1];
