@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,11 +23,17 @@ namespace ProjektKCK2
         public MenuWindow()
         {
             InitializeComponent();
-            
+            Reading();
+            Complet(Player.Punkty, Player.Nick);
         }
 
-        private int menu=0;
 
+
+
+        private int menu=0;
+        public static string[,] array = new string[10, 2];
+
+        
 
         private void KDown(object sender, KeyEventArgs e)
         {
@@ -45,7 +52,7 @@ namespace ProjektKCK2
 
             if(e.Key == Key.Down)
             {
-                if (menu == 2)
+                if (menu == 3)
                 {
                     menu = 0;
                 }
@@ -58,11 +65,15 @@ namespace ProjektKCK2
 
             if(e.Key==Key.Enter && menu == 0)
             {
+                
                 NickLabel.Visibility = Visibility.Visible;
                 NickText.Visibility = Visibility.Visible;
+                NickText.Focus();
+                
 
                 if (e.Key == Key.Enter && NickText.Text!="")
                 {
+                    Player.Nick = NickText.Text;
                     MainWindow GameWindow = new MainWindow();
                     GameWindow.Show();
                     Close();
@@ -79,6 +90,14 @@ namespace ProjektKCK2
 
             if(e.Key==Key.Enter && menu == 2)
             {
+                HelpWindow helpWindow = new HelpWindow();
+                helpWindow.Show();
+                Close();
+            }
+            
+            if (e.Key == Key.Enter && menu == 3)
+            {
+                Writing();
                 Application.Current.Shutdown();
             }
 
@@ -87,24 +106,84 @@ namespace ProjektKCK2
 
         private void Visible()
         {
-            if (menu == 0)
+            switch (menu)
             {
-                T1.Visibility = Visibility.Visible;
-                T2.Visibility = Visibility.Hidden;
-                T3.Visibility = Visibility.Hidden;
-            }
-            if (menu == 1)
-            {
-                T1.Visibility = Visibility.Hidden;
-                T2.Visibility = Visibility.Visible;
-                T3.Visibility = Visibility.Hidden;
-            }
-            if (menu == 2)
-            {
-                T1.Visibility = Visibility.Hidden;
-                T2.Visibility = Visibility.Hidden;
-                T3.Visibility = Visibility.Visible;
+                case 0:
+                    T1.Visibility = Visibility.Visible;
+                    T2.Visibility = Visibility.Hidden;
+                    T3.Visibility = Visibility.Hidden;
+                    T4.Visibility = Visibility.Hidden;
+                    break;
+                case 1:
+                    T1.Visibility = Visibility.Hidden;
+                    T2.Visibility = Visibility.Visible;
+                    T3.Visibility = Visibility.Hidden;
+                    T4.Visibility = Visibility.Hidden;
+                    break;
+                case 2:
+                    T1.Visibility = Visibility.Hidden;
+                    T2.Visibility = Visibility.Hidden;
+                    T3.Visibility = Visibility.Visible;
+                    T4.Visibility = Visibility.Hidden;
+                    break;
+                case 3:
+                    T1.Visibility = Visibility.Hidden;
+                    T2.Visibility = Visibility.Hidden;
+                    T3.Visibility = Visibility.Hidden;
+                    T4.Visibility = Visibility.Visible;
+                    break;
             }
         }
+
+        public void Reading()
+        {
+            StreamReader r1 = new StreamReader("../Data/wyniki.txt");
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 2; j++)
+                {
+                    array[i, j] = r1.ReadLine();
+                }
+            }
+        }
+
+        public void Writing()
+        {
+            StreamWriter w1 = new StreamWriter("../Data/wyniki.txt");
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 2; j++)
+                {
+                    w1.WriteLine(array[i, j]);
+                }
+            }
+
+
+        }
+
+        public void Complet(int score, string nick)
+        {
+            if (score != 0 && nick != "")
+            {
+                for (int i = 0; i < 10; i++)
+                {
+                    if (int.Parse(array[i, 1]) < score)
+                    {
+                        for (int j = 10; j > i; j--)
+                        {
+                            array[j - 1, 0] = array[j - 2, 0];
+                            array[j - 1, 1] = array[j - 2, 1];
+
+                        }
+                        array[i, 0] = nick;
+                        array[i, 1] = score.ToString();
+                        int a = 1;
+                        break;
+                    }
+                }
+            }
+        }
+
+
     }
 }

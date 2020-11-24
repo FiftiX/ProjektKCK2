@@ -22,7 +22,6 @@ namespace ProjektKCK2
 
         DispatcherTimer gameTimer = new DispatcherTimer();
         Random rand = new Random();
-
         int Window_Width = 1272;
         int Window_Height = 720;
         int speed = 10;
@@ -34,6 +33,7 @@ namespace ProjektKCK2
 
         int CoinTemp = 30;
         int score;
+        public int bestScore=0;
         bool gameOver, moveLeft, moveRight;
         Rect playerHitBox;
         ImageBrush coinImage = new ImageBrush();
@@ -172,7 +172,12 @@ namespace ProjektKCK2
             {
                 gameTimer.Stop(); 
                 EndLabel.Content = "GAMEOVER!\n" + "Press R to Restart Game\n" + "Press Esc to Back Menu"; // add this text to the existing text on the label
-                gameOver = true; 
+                gameOver = true;
+                if (score > bestScore)
+                {
+                    bestScore = score;
+                }
+                Player.Punkty = bestScore;
             }
         }
 
@@ -366,9 +371,6 @@ namespace ProjektKCK2
 
             MainCanvas.Children.Add(newCoin);
         }
-
-
-
 
 
 
