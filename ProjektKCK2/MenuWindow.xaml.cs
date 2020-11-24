@@ -54,12 +54,30 @@ namespace ProjektKCK2
                     menu++;
                 }
             }
-            HeadMethod();
+            Visible();
+
+            if(e.Key==Key.Enter && menu == 0)
+            {
+                MainWindow GameWindow = new MainWindow();
+                GameWindow.Show();
+                Close();
+            }
+
+            if(e.Key==Key.Enter && menu == 1)
+            {
+                //TUTAJ WYSWIETLANIE TABLICY WYNIKOW 
+                //może w wyskakującym oknie będzie najlepiej
+            }
+
+            if(e.Key==Key.Enter && menu == 2)
+            {
+                Application.Current.Shutdown();
+            }
 
         }
 
 
-        private void HeadMethod()
+        private void Visible()
         {
             if (menu == 0)
             {
@@ -79,7 +97,6 @@ namespace ProjektKCK2
                 T2.Visibility = Visibility.Hidden;
                 T3.Visibility = Visibility.Visible;
             }
-            
         }
     }
 }

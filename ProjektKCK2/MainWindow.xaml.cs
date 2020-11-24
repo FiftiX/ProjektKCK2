@@ -14,7 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 
-namespace ProjectKckFrameworkOnly
+namespace ProjektKCK2
 {
     /// <summary>
     /// Logika interakcji dla klasy MainWindow.xaml
