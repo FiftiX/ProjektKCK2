@@ -145,7 +145,7 @@ namespace ProjektKCK2
 
         public void Reading()
         {
-            StreamReader r1 = new StreamReader("/Dane/wyniki.txt");
+            StreamReader r1 = new StreamReader(@"/Dane/wyniki.txt");
             for (int i = 0; i < 10; i++)
             {
                 for (int j = 0; j < 2; j++)
@@ -159,7 +159,7 @@ namespace ProjektKCK2
         public void Writing()
         {
             string pom;
-            StreamWriter w1 = new StreamWriter("/Dane/wyniki.txt");
+            StreamWriter w1 = new StreamWriter(@"/Dane/wyniki.txt");
             for (int i = 0; i < 10; i++)
             {
                 for (int j = 0; j < 2; j++)
@@ -202,7 +202,6 @@ namespace ProjektKCK2
             for(int i = 0; i < 10; i++)
             {
                 items.Add(new Player() { Place = i + 1, NickName = array[i, 0], Points = int.Parse(array[i, 1]) });
-                int a = 1;
             }
             lvPlayers.ItemsSource = items;
         }

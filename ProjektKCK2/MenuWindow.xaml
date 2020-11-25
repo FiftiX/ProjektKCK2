@@ -63,7 +63,6 @@
             </ListView.View>
         </ListView>
         <Label x:Name="LabelPoints" Content="Aby powrócić do menu naciśnij ESC" HorizontalAlignment="Left" Margin="58,633,0,0" VerticalAlignment="Top" Width="1136" Height="72" FontSize="24" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Visibility="Hidden"/>
-        <TextBox x:Name = "HelpText" TextWrapping = "Wrap" IsReadOnly = "True" Margin = "50,50,50,50" Grid.ColumnSpan = "3" Visibility="Hidden" />
-
+        <TextBox x:Name="HelpText" TextWrapping="Wrap" IsReadOnly="True" Margin="50,50,50,50" Grid.ColumnSpan="3" Visibility="Hidden"/>
     </Grid>
 </Window>
