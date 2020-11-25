@@ -145,7 +145,7 @@ namespace ProjektKCK2
 
         public void Reading()
         {
-            StreamReader r1 = new StreamReader(@"/Dane/wyniki.txt");
+            StreamReader r1 = new StreamReader(@"../../Dane/wyniki.txt");
             for (int i = 0; i < 10; i++)
             {
                 for (int j = 0; j < 2; j++)
@@ -159,7 +159,7 @@ namespace ProjektKCK2
         public void Writing()
         {
             string pom;
-            StreamWriter w1 = new StreamWriter(@"/Dane/wyniki.txt");
+            StreamWriter w1 = new StreamWriter(@"../../Dane/wyniki.txt");
             for (int i = 0; i < 10; i++)
             {
                 for (int j = 0; j < 2; j++)
