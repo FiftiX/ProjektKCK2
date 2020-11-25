@@ -50,10 +50,20 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <Label x:Name="NickLabel" Content="Podaj nick i naciśnij Enter:" HorizontalAlignment="Left" Margin="338,413,0,0" VerticalAlignment="Top" Height="99" Width="550" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" Visibility="Hidden"/>
-        <TextBox x:Name="NickText" HorizontalAlignment="Left" Height="116" Margin="338,512,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="550" FontSize="36" HorizontalContentAlignment="Center" Visibility="Hidden"/>
+        <Label x:Name="NickLabel" Content="Podaj nick i naciśnij Enter:" HorizontalAlignment="Left" Margin="338,490,0,0" VerticalAlignment="Top" Height="99" Width="550" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" Visibility="Hidden"/>
+        <TextBox x:Name="NickText" HorizontalAlignment="Left" Height="116" Margin="338,589,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="550" FontSize="36" HorizontalContentAlignment="Center" Visibility="Hidden"/>
         <Label Content="WYJŚCIE" HorizontalAlignment="Left" Margin="338,387,0,0" VerticalAlignment="Top" Height="103" Width="646" FontWeight="Bold" FontSize="50" VerticalContentAlignment="Center"/>
-
+        <ListView x:Name="lvPlayers" HorizontalAlignment="Left" Height="578" Margin="58,50,0,0" VerticalAlignment="Top" Width="1136" FontSize="36" Visibility="Hidden">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Miejsce" Width="150" DisplayMemberBinding="{Binding Place}" />
+                    <GridViewColumn Header="Nick" Width="400" DisplayMemberBinding="{Binding NickName}" />
+                    <GridViewColumn Header="Punkty" Width="150" DisplayMemberBinding="{Binding Points}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label x:Name="LabelPoints" Content="Aby powrócić do menu naciśnij ESC" HorizontalAlignment="Left" Margin="58,633,0,0" VerticalAlignment="Top" Width="1136" Height="72" FontSize="24" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Visibility="Hidden"/>
+        <TextBox x:Name = "HelpText" TextWrapping = "Wrap" IsReadOnly = "True" Margin = "50,50,50,50" Grid.ColumnSpan = "3" Visibility="Hidden" />
 
     </Grid>
 </Window>

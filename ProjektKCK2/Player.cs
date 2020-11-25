@@ -10,5 +10,9 @@ namespace ProjektKCK2
     {
         public static int Punkty=0;
         public static string Nick="";
+
+        public int Place { get; set; }
+        public string NickName { get; set; }
+        public int Points { get; set; }
     }
 }
