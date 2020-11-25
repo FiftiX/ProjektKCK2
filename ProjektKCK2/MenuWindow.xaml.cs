@@ -209,10 +209,10 @@ namespace ProjektKCK2
         private void WriteInstruction()
         {
             HelpText.Text =
-            "W grze poruszamy się drogą dwukierunkową za pomocą strzałek w lewo i prawo. (Left Arrow i Right Arrow).\n" +
-            "W poruszaniu przeszkdza ruch uliczny. Przybliżamy się wolniej do aut jadących zgodnie z naszym kierunkiem jazdy.\n" +
-            "Najeżdżając na gwiazdkę dostajemy 1 punkt. Co 10 zebranych gwiazdek, poziom się zwiększa,\nco oznacza zwiększenie prędkości ruchy ulicznego \n" +
-            "Jeśli chcesz wrócić do menu wciśnij ESC.";
+            "*W grze poruszamy się drogą dwukierunkową za pomocą strzałek w lewo i prawo. (Left Arrow i Right Arrow).\n" +
+            "\n*W poruszaniu przeszkadza ruch uliczny. Przybliżamy się wolniej do aut jadących zgodnie z naszym kierunkiem jazdy.\n" +
+            "\n*Najeżdżając na monetę dostajemy 1 punkt. Co 10 zebranych monet, poziom się zwiększa,\nco oznacza zwiększenie prędkości ruchu ulicznego \n" +
+            "\nJeśli chcesz wrócić do menu wciśnij ESC.";
             HelpText.FontSize = 25;
         }
 

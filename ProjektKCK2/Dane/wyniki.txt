@@ -8,6 +8,8 @@ Kasjo
 7
 Khazix
 6
+Piotrekv2
+6
 Leesin
 5
 Elise
@@ -16,5 +18,3 @@ Jarvan
 3
 Graves
 2
-Sejuani
-1
